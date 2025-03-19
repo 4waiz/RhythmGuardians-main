@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mu0lmviyl6vb"]
+
+[ext_resource type="Script" path="res://scene/game_object/camera/camera.gd" id="1_6oss2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2rbs"]
+normal = Vector2(1, 0)
+distance = 36.8
+
+[node name="GameCam" type="Camera2D"]
+zoom = Vector2(0.75, 0.75)
+script = ExtResource("1_6oss2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1037, -29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(233, 60)
+shape = SubResource("WorldBoundaryShape2D_t2rbs")

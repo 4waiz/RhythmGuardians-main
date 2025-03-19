@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://calllgoyl1rsa"]
+
+[ext_resource type="PackedScene" uid="uid://bwcostktt7fmr" path="res://scene/game_object/platform/green_platform.tscn" id="1_o6hdx"]
+
+[node name="PlatformCombo3" type="Node2D" groups=["platform_combo"]]
+position = Vector2(-232, -8)
+
+[node name="GreenPlatform" parent="." instance=ExtResource("1_o6hdx")]
+position = Vector2(38, -126)
+
+[node name="GreenPlatform2" parent="." instance=ExtResource("1_o6hdx")]
+position = Vector2(362, -26)
+
+[node name="GreenPlatform3" parent="." instance=ExtResource("1_o6hdx")]
+position = Vector2(577, -256)

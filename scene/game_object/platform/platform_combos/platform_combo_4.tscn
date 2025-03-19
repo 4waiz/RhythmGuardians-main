@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://biwxtg8r243a8"]
+
+[ext_resource type="PackedScene" uid="uid://bwcostktt7fmr" path="res://scene/game_object/platform/green_platform.tscn" id="1_p3lvl"]
+
+[node name="PlatformCombo4" type="Node2D" groups=["pf4", "platform_combo"]]
+position = Vector2(46, 731)
+
+[node name="GreenPlatform" parent="." instance=ExtResource("1_p3lvl")]
+position = Vector2(85, -102)
+
+[node name="GreenPlatform2" parent="." instance=ExtResource("1_p3lvl")]
+position = Vector2(328, -348)
+
+[node name="GreenPlatform3" parent="." instance=ExtResource("1_p3lvl")]
+position = Vector2(651, -219)

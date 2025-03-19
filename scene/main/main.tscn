@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://bu85jcvcmrpvt"]
+
+[ext_resource type="Script" path="res://scene/main/main.gd" id="1_3eiuv"]
+[ext_resource type="PackedScene" uid="uid://dreepei1f4eag" path="res://scene/game_object/background/parallax_background.tscn" id="1_n2e3n"]
+[ext_resource type="PackedScene" uid="uid://mu0lmviyl6vb" path="res://scene/game_object/camera/camera.tscn" id="2_53hw5"]
+[ext_resource type="PackedScene" uid="uid://c7kxnhc7e61wh" path="res://scene/game_object/ground/ground.tscn" id="2_r34rx"]
+[ext_resource type="FontFile" uid="uid://b6lkxh5rjbe5a" path="res://resources/theme/Rockboxcond12.ttf" id="3_7chvd"]
+[ext_resource type="PackedScene" uid="uid://dp864vjgdjpn0" path="res://scene/game_object/player/player.tscn" id="3_8cjlv"]
+[ext_resource type="PackedScene" uid="uid://cdn3fg3cs8b5e" path="res://scene/manager/ground_manager.tscn" id="3_lm3ip"]
+[ext_resource type="PackedScene" uid="uid://dkskcfrl7tdg0" path="res://scene/game_object/enemy/basic_enemy.tscn" id="4_qyne1"]
+[ext_resource type="PackedScene" uid="uid://dknqpvj2u08t3" path="res://scene/manager/enemy_manager.tscn" id="6_63lux"]
+[ext_resource type="PackedScene" uid="uid://daxwbn7jrvena" path="res://scene/manager/platform_manager.tscn" id="7_mrrbt"]
+[ext_resource type="AudioStream" uid="uid://b0pnndkkgefeu" path="res://soundtrack.mp3" id="11_lvdsm"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_3eiuv")
+
+[node name="GameCam" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_53hw5")]
+position = Vector2(323, 716)
+offset = Vector2(0, -275)
+player = NodePath("../Player")
+
+[node name="Label" type="Label" parent="GameCam"]
+offset_left = -60.0
+offset_top = -698.0
+offset_right = 30.0
+offset_bottom = -548.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7chvd")
+theme_override_font_sizes/font_size = 160
+text = "w"
+
+[node name="Area2D" type="Area2D" parent="GameCam"]
+
+[node name="Parallax_Background" parent="." instance=ExtResource("1_n2e3n")]
+offset = Vector2(0, -350)
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 0, -350)
+
+[node name="GroundManager" parent="." node_paths=PackedStringArray("first_ground", "player") instance=ExtResource("3_lm3ip")]
+first_ground = NodePath("InitialGround")
+player = NodePath("../Player")
+
+[node name="InitialGround" parent="GroundManager" instance=ExtResource("2_r34rx")]
+unique_name_in_owner = true
+position = Vector2(-1770, 0)
+
+[node name="PlatformManager" parent="." node_paths=PackedStringArray("goal_area") instance=ExtResource("7_mrrbt")]
+goal_area = NodePath("../GameCam/Area2D")
+
+[node name="EnemyManager" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_63lux")]
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("3_8cjlv")]
+position = Vector2(92, 450)
+scale = Vector2(10, 10)
+
+[node name="basic_enemy" parent="." instance=ExtResource("4_qyne1")]
+position = Vector2(2141, 492)
+
+[node name="entities" type="Node" parent="." groups=["entities"]]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_lvdsm")
+volume_db = -20.0

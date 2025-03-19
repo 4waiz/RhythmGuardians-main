@@ -1,0 +1,176 @@
+[gd_scene load_steps=25 format=3 uid="uid://dkskcfrl7tdg0"]
+
+[ext_resource type="Script" path="res://scene/game_object/enemy/basic_enemy.gd" id="1_dphfk"]
+[ext_resource type="Texture2D" uid="uid://cnbadeus6vfm7" path="res://mort.png" id="1_ji1jo"]
+[ext_resource type="PackedScene" uid="uid://bp5ah440ddf33" path="res://scene/component/velocity_component.tscn" id="2_ixy0a"]
+[ext_resource type="Texture2D" uid="uid://dncowl3bm60n5" path="res://assets/particle.png" id="4_3a207"]
+[ext_resource type="PackedScene" uid="uid://ccnugxuwre3ow" path="res://scene/component/state_machine.tscn" id="5_r54b5"]
+[ext_resource type="Script" path="res://scene/game_object/enemy/enemy_states/EnemyIdle.gd" id="6_jlcy2"]
+[ext_resource type="Script" path="res://scene/game_object/enemy/enemy_states/EnemyChasing.gd" id="7_y0cnk"]
+[ext_resource type="Script" path="res://scene/game_object/enemy/enemy_states/EnemyTackling.gd" id="8_sxt5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shsl1"]
+size = Vector2(13.5, 9.58333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rgen"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxmse"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x60y5"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn23n"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7vef"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3b3e"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdnhp"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ky2g4"]
+atlas = ExtResource("1_ji1jo")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a7y87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rgen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x60y5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn23n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7vef")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3b3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdnhp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ky2g4")
+}],
+"loop": true,
+"name": &"tackle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brspj"]
+
+[sub_resource type="Gradient" id="Gradient_otwja"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.235294, 0.632353)
+colors = PackedColorArray(0.545098, 0.607843, 0.705882, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6deao"]
+gradient = SubResource("Gradient_otwja")
+
+[sub_resource type="Curve" id="Curve_hrg4c"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.247807, 0.995985), 0.0, 0.0, 0, 0, Vector2(0.717105, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_rrtt1"]
+curve = SubResource("Curve_hrg4c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_78hnc"]
+particle_flag_disable_z = true
+spread = 30.0
+initial_velocity_min = 31.33
+initial_velocity_max = 139.76
+gravity = Vector3(0, 0, 0)
+scale_min = 1.4
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_rrtt1")
+color_initial_ramp = SubResource("GradientTexture1D_6deao")
+turbulence_enabled = true
+
+[node name="basic_enemy" type="CharacterBody2D" groups=["basic_enemy", "enemy"]]
+scale = Vector2(9, 9)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_dphfk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["basic_enemy"]]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(1.25, 4.45833)
+shape = SubResource("RectangleShape2D_shsl1")
+
+[node name="VelocityComponent" parent="." instance=ExtResource("2_ixy0a")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.00784314, 0.67451, 1, 1)
+sprite_frames = SubResource("SpriteFrames_a7y87")
+animation = &"idle"
+flip_h = true
+
+[node name="TackleArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TackleArea"]
+shape = SubResource("CircleShape2D_brspj")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(3.77778, 8.11111)
+emitting = false
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_78hnc")
+texture = ExtResource("4_3a207")
+lifetime = 0.8
+explosiveness = 0.5
+fixed_fps = 0
+interpolate = false
+
+[node name="StateMachine" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("5_r54b5")]
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("6_jlcy2")
+enemy = NodePath("../..")
+
+[node name="Chasing" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("7_y0cnk")
+enemy = NodePath("../..")
+
+[node name="Tackling" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("8_sxt5r")
+enemy = NodePath("../..")
+
+[node name="TackleTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.4
+one_shot = true

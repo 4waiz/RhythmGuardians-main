@@ -1,0 +1,16 @@
+[gd_scene load_steps=7 format=3 uid="uid://daxwbn7jrvena"]
+
+[ext_resource type="Script" path="res://scene/manager/platform_manager.gd" id="1_mv8nr"]
+[ext_resource type="PackedScene" uid="uid://c8kbn1j3ky7jy" path="res://scene/game_object/platform/platform_combos/platform_combo_1.tscn" id="2_3dd8j"]
+[ext_resource type="PackedScene" uid="uid://b8basg86mk405" path="res://scene/game_object/platform/platform_combos/platform_combo_2.tscn" id="3_kgum8"]
+[ext_resource type="PackedScene" uid="uid://calllgoyl1rsa" path="res://scene/game_object/platform/platform_combos/platform_combo_3.tscn" id="4_u61dy"]
+[ext_resource type="PackedScene" uid="uid://biwxtg8r243a8" path="res://scene/game_object/platform/platform_combos/platform_combo_4.tscn" id="5_rbk66"]
+[ext_resource type="PackedScene" uid="uid://ikguf85k4vju" path="res://scene/game_object/platform/black_platform.tscn" id="6_jl0pi"]
+
+[node name="PlatformManager" type="Node"]
+script = ExtResource("1_mv8nr")
+platform_combo_1 = ExtResource("2_3dd8j")
+platform_combo_2 = ExtResource("3_kgum8")
+platform_combo_3 = ExtResource("4_u61dy")
+platform_combo_4 = ExtResource("5_rbk66")
+black_platform = ExtResource("6_jl0pi")

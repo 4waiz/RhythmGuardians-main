@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ikguf85k4vju"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j4sof"]
+load_path = "res://.godot/imported/platforms.png-5982efe2a9951f8e6b9c239069233da9.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmyui"]
+size = Vector2(32, 8)
+
+[node name="BlackPlatform" type="StaticBody2D" groups=["black", "platform_combo"]]
+scale = Vector2(8, 8)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.187449, 0, 1)
+texture = SubResource("CompressedTexture2D_j4sof")
+region_enabled = true
+region_rect = Rect2(15.7284, 0.464398, 32.1611, 7.99602)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vmyui")
+one_way_collision_margin = 0.0
