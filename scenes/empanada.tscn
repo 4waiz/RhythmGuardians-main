@@ -20,7 +20,8 @@ shape = SubResource("RectangleShape2D_acm23")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 2
 visibility_layer = 2
-scale = Vector2(3.408, 3.408)
+position = Vector2(0, 5)
+scale = Vector2(1.3915, 1.15713)
 texture = ExtResource("2_ckjxm")
 
 [node name="PointLight2D" parent="." instance=ExtResource("3_iltas")]

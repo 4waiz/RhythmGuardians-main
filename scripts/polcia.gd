@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var move_speed = 15
+var move_speed = 10
 var max_speed = 90
 
 @onready var sensor_derecha = $sensor_derecha

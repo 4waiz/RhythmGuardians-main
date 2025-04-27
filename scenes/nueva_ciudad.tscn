@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d2r1f7tbtkm0a"]
+[gd_scene load_steps=16 format=3 uid="uid://d2r1f7tbtkm0a"]
 
 [ext_resource type="Texture2D" uid="uid://bkxq68ceieag4" path="res://assets/tilemap/ciudad.png" id="1_2c1g8"]
 [ext_resource type="Script" path="res://scripts/nueva_ciudad.gd" id="1_vuht1"]
@@ -352,20 +352,6 @@ tile_size = Vector2i(10, 10)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xac8p")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqmpg"]
-size = Vector2(20, 30)
-
-[sub_resource type="LabelSettings" id="LabelSettings_o3shs"]
-font_size = 8
-outline_size = 1
-shadow_color = Color(0, 0, 0, 0.505882)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgdoc"]
-size = Vector2(20, 29)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_10i7o"]
-size = Vector2(20, 27)
-
 [node name="NuevaCiudad" type="Node2D"]
 script = ExtResource("1_vuht1")
 metadata/_edit_horizontal_guides_ = [0.0, 650.0, 649.0]
@@ -379,113 +365,6 @@ layer_1/name = "farolas"
 layer_1/tile_data = PackedInt32Array(3604583, 2097152, 22, 3670119, 2097152, 23, 3735655, 2097152, 24, 3801191, 2097152, 25, 3866727, 2097152, 26, 3604584, 2162688, 22, 3670120, 2162688, 23, 3735656, 2162688, 24, 3801192, 2162688, 25, 3866728, 2162688, 26, 3604537, 2097152, 22, 3670073, 2097152, 23, 3735609, 2097152, 24, 3801145, 2097152, 25, 3866681, 2097152, 26, 3604538, 2162688, 22, 3670074, 2162688, 23, 3735610, 2162688, 24, 3801146, 2162688, 25, 3866682, 2162688, 26, 3604513, 2097152, 22, 3670049, 2097152, 23, 3735585, 2097152, 24, 3801121, 2097152, 25, 3866657, 2097152, 26, 3604514, 2162688, 22, 3670050, 2162688, 23, 3735586, 2162688, 24, 3801122, 2162688, 25, 3866658, 2162688, 26, 3604489, 2097152, 22, 3670025, 2097152, 23, 3735561, 2097152, 24, 3801097, 2097152, 25, 3866633, 2097152, 26, 3604490, 2162688, 22, 3670026, 2162688, 23, 3735562, 2162688, 24, 3801098, 2162688, 25, 3866634, 2162688, 26, 2490372, 2097152, 22, 2555908, 2097152, 23, 2621444, 2097152, 24, 2686980, 2097152, 25, 2752516, 2097152, 26, 2490373, 2162688, 22, 2555909, 2162688, 23, 2621445, 2162688, 24, 2686981, 2162688, 25, 2752517, 2162688, 26, 2490388, 2097152, 22, 2555924, 2097152, 23, 2621460, 2097152, 24, 2686996, 2097152, 25, 2752532, 2097152, 26, 2490389, 2162688, 22, 2555925, 2162688, 23, 2621461, 2162688, 24, 2686997, 2162688, 25, 2752533, 2162688, 26, 2490407, 2097152, 22, 2555943, 2097152, 23, 2621479, 2097152, 24, 2687015, 2097152, 25, 2752551, 2097152, 26, 2490408, 2162688, 22, 2555944, 2162688, 23, 2621480, 2162688, 24, 2687016, 2162688, 25, 2752552, 2162688, 26, 2490432, 2097152, 22, 2555968, 2097152, 23, 2621504, 2097152, 24, 2687040, 2097152, 25, 2752576, 2097152, 26, 2490433, 2162688, 22, 2555969, 2162688, 23, 2621505, 2162688, 24, 2687041, 2162688, 25, 2752577, 2162688, 26, 2424928, 2097152, 22, 2490464, 2097152, 23, 2556000, 2097152, 24, 2621536, 2097152, 25, 2687072, 2097152, 26, 2424929, 2162688, 22, 2490465, 2162688, 23, 2556001, 2162688, 24, 2621537, 2162688, 25, 2687073, 2162688, 26, 1179744, 2097152, 22, 1245280, 2097152, 23, 1310816, 2097152, 24, 1376352, 2097152, 25, 1441888, 2097152, 26, 1179745, 2162688, 22, 1245281, 2162688, 23, 1310817, 2162688, 24, 1376353, 2162688, 25, 1441889, 2162688, 26, 1245258, 2097152, 22, 1310794, 2097152, 23, 1376330, 2097152, 24, 1441866, 2097152, 25, 1507402, 2097152, 26, 1245259, 2162688, 22, 1310795, 2162688, 23, 1376331, 2162688, 24, 1441867, 2162688, 25, 1507403, 2162688, 26, 1245235, 2097152, 22, 1310771, 2097152, 23, 1376307, 2097152, 24, 1441843, 2097152, 25, 1507379, 2097152, 26, 1245236, 2162688, 22, 1310772, 2162688, 23, 1376308, 2162688, 24, 1441844, 2162688, 25, 1507380, 2162688, 26, 1245214, 2097152, 22, 1310750, 2097152, 23, 1376286, 2097152, 24, 1441822, 2097152, 25, 1507358, 2097152, 26, 1245215, 2162688, 22, 1310751, 2162688, 23, 1376287, 2162688, 24, 1441823, 2162688, 25, 1507359, 2162688, 26, 1245189, 2097152, 22, 1310725, 2097152, 23, 1376261, 2097152, 24, 1441797, 2097152, 25, 1507333, 2097152, 26, 1245190, 2162688, 22, 1310726, 2162688, 23, 1376262, 2162688, 24, 1441798, 2162688, 25, 1507334, 2162688, 26, 196620, 2097152, 22, 262156, 2097152, 23, 327692, 2097152, 24, 393228, 2097152, 25, 458764, 2097152, 26, 196621, 2162688, 22, 262157, 2162688, 23, 327693, 2162688, 24, 393229, 2162688, 25, 458765, 2162688, 26, 196637, 2097152, 22, 262173, 2097152, 23, 327709, 2097152, 24, 393245, 2097152, 25, 458781, 2097152, 26, 196638, 2162688, 22, 262174, 2162688, 23, 327710, 2162688, 24, 393246, 2162688, 25, 458782, 2162688, 26, 196653, 2097152, 22, 262189, 2097152, 23, 327725, 2097152, 24, 393261, 2097152, 25, 458797, 2097152, 26, 196654, 2162688, 22, 262190, 2162688, 23, 327726, 2162688, 24, 393262, 2162688, 25, 458798, 2162688, 26, 196670, 2097152, 22, 262206, 2097152, 23, 327742, 2097152, 24, 393278, 2097152, 25, 458814, 2097152, 26, 196671, 2162688, 22, 262207, 2162688, 23, 327743, 2162688, 24, 393279, 2162688, 25, 458815, 2162688, 26, 196685, 2097152, 22, 262221, 2097152, 23, 327757, 2097152, 24, 393293, 2097152, 25, 458829, 2097152, 26, 196686, 2162688, 22, 262222, 2162688, 23, 327758, 2162688, 24, 393294, 2162688, 25, 458830, 2162688, 26, 196702, 2097152, 22, 262238, 2097152, 23, 327774, 2097152, 24, 393310, 2097152, 25, 458846, 2097152, 26, 196703, 2162688, 22, 262239, 2162688, 23, 327775, 2162688, 24, 393311, 2162688, 25, 458847, 2162688, 26, 2687005, 2228224, 19, 2687006, 2293760, 19, 2687007, 2359296, 19, 2687008, 2424832, 19, 2687009, 2490368, 19, 1441852, 2228224, 19, 1441853, 2293760, 19, 1441854, 2359296, 19, 1441855, 2424832, 19, 1441856, 2490368, 19, 3801148, 2228224, 19, 3801149, 2293760, 19, 3801150, 2359296, 19, 3801151, 2424832, 19, 3801152, 2490368, 19, 3801186, 2228224, 19, 3801187, 2293760, 19, 3801188, 2359296, 19, 3801189, 2424832, 19, 3801190, 2490368, 19, 3735612, 2293760, 18, 3735613, 2359296, 18, 3735614, 2424832, 18, 3735615, 2490368, 18, 3735650, 2293760, 18, 3735651, 2359296, 18, 3735652, 2424832, 18, 3735653, 2490368, 18, 2621470, 2293760, 18, 2621471, 2359296, 18, 2621472, 2424832, 18, 2621473, 2490368, 18, 1376316, 2293760, 18, 1376317, 2359296, 18, 1376318, 2424832, 18, 1376319, 2490368, 18)
 layer_2/name = "basura"
 layer_2/tile_data = PackedInt32Array(3735595, 3145728, 1, 3801131, 3145728, 2, 3735596, 3211264, 1, 3801132, 3211264, 2, 3735597, 3276800, 1, 3801133, 3276800, 2, 3735614, 3145728, 1, 3801150, 3145728, 2, 3735615, 3211264, 1, 3801151, 3211264, 2, 3735616, 3276800, 1, 3801152, 3276800, 2, 2621540, 3145728, 1, 2687076, 3145728, 2, 2621541, 3211264, 1, 2687077, 3211264, 2, 2621542, 3276800, 1, 2687078, 3276800, 2, 2621471, 3145728, 1, 2687007, 3145728, 2, 2621472, 3211264, 1, 2687008, 3211264, 2, 2621473, 3276800, 1, 2687009, 3276800, 2, 1376265, 3145728, 1, 1441801, 3145728, 2, 1376266, 3211264, 1, 1441802, 3211264, 2, 1376267, 3276800, 1, 1441803, 3276800, 2, 1376318, 3145728, 1, 1441854, 3145728, 2, 1376319, 3211264, 1, 1441855, 3211264, 2, 1376320, 3276800, 1, 1441856, 3276800, 2, 1376334, 3145728, 3, 1441870, 3145728, 4, 1507406, 3145728, 5, 1376335, 3211264, 3, 1441871, 3211264, 4, 1507407, 3211264, 5, 1376336, 3276800, 3, 1441872, 3276800, 4, 1507408, 3276800, 5, 327746, 3145728, 3, 393282, 3145728, 4, 458818, 3145728, 5, 327747, 3211264, 3, 393283, 3211264, 4, 458819, 3211264, 5, 327748, 3276800, 3, 393284, 3276800, 4, 458820, 3276800, 5, 1376289, 3145728, 3, 1441825, 3145728, 4, 1507361, 3145728, 5, 1376290, 3211264, 3, 1441826, 3211264, 4, 1507362, 3211264, 5, 1376291, 3276800, 3, 1441827, 3276800, 4, 1507363, 3276800, 5, 2621500, 3145728, 3, 2687036, 3145728, 4, 2752572, 3145728, 5, 2621501, 3211264, 3, 2687037, 3211264, 4, 2752573, 3211264, 5, 2621502, 3276800, 3, 2687038, 3276800, 4, 2752574, 3276800, 5)
-
-[node name="LavaPlatos" type="Area2D" parent="." groups=["Platos"]]
-position = Vector2(760, 582)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LavaPlatos"]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_cqmpg")
-
-[node name="Label" type="Label" parent="LavaPlatos"]
-visible = false
-offset_left = -27.0
-offset_top = -34.0
-offset_right = 33.0
-offset_bottom = -11.0
-text = "PRESS  E"
-label_settings = SubResource("LabelSettings_o3shs")
-horizontal_alignment = 1
-
-[node name="Mickey" type="Area2D" parent="." groups=["Mickey"]]
-position = Vector2(760, 410)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mickey"]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_mgdoc")
-
-[node name="Label" type="Label" parent="Mickey"]
-visible = false
-offset_left = -31.0
-offset_top = -32.0
-offset_right = 29.0
-offset_bottom = -9.0
-text = "PRESS  E"
-label_settings = SubResource("LabelSettings_o3shs")
-horizontal_alignment = 1
-
-[node name="Inimputable" type="Area2D" parent="." groups=["Mickey"]]
-position = Vector2(690, 414)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimputable"]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_mgdoc")
-
-[node name="Label" type="Label" parent="Inimputable"]
-visible = false
-offset_left = -30.0
-offset_top = -35.0
-offset_right = 30.0
-offset_bottom = -12.0
-text = "PRESS  E"
-label_settings = SubResource("LabelSettings_o3shs")
-horizontal_alignment = 1
-
-[node name="Infidelidad" type="Area2D" parent="." groups=["Mickey"]]
-position = Vector2(160, 592)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Infidelidad"]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_mgdoc")
-
-[node name="Label2" type="Label" parent="Infidelidad"]
-offset_left = -29.0
-offset_top = -44.0
-offset_right = 31.0
-offset_bottom = -21.0
-text = "PRESS  E"
-label_settings = SubResource("LabelSettings_o3shs")
-horizontal_alignment = 1
-
-[node name="Diegote" type="Area2D" parent="." groups=["Mickey"]]
-position = Vector2(190, 232)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Diegote"]
-position = Vector2(219, -1)
-shape = SubResource("RectangleShape2D_mgdoc")
-
-[node name="Label" type="Label" parent="Diegote"]
-visible = false
-offset_left = 190.0
-offset_top = -43.0
-offset_right = 250.0
-offset_bottom = -20.0
-text = "PRESS  E"
-label_settings = SubResource("LabelSettings_o3shs")
-horizontal_alignment = 1
-
-[node name="Casa" type="Area2D" parent="." groups=["Casa"]]
-position = Vector2(1011, 223)
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="Casa"]
-visible = false
-offset_left = -32.0
-offset_top = -35.0
-offset_right = 28.0
-offset_bottom = -12.0
-text = "PRESS  E"
-label_settings = SubResource("LabelSettings_o3shs")
-horizontal_alignment = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Casa"]
-position = Vector2(0, 13)
-shape = SubResource("RectangleShape2D_10i7o")
 
 [node name="policias" type="CanvasGroup" parent="."]
 
@@ -701,16 +580,3 @@ autoplay = true
 
 [node name="NPC" parent="." instance=ExtResource("13_0red3")]
 position = Vector2(952, 542)
-
-[connection signal="body_entered" from="LavaPlatos" to="." method="_on_lava_platos_body_entered"]
-[connection signal="body_exited" from="LavaPlatos" to="." method="_on_lava_platos_body_exited"]
-[connection signal="body_entered" from="Mickey" to="." method="_on_mickey_body_entered"]
-[connection signal="body_exited" from="Mickey" to="." method="_on_mickey_body_exited"]
-[connection signal="body_entered" from="Inimputable" to="." method="_on_inimputable_body_entered"]
-[connection signal="body_exited" from="Inimputable" to="." method="_on_inimputable_body_exited"]
-[connection signal="body_entered" from="Infidelidad" to="." method="_on_infidelidad_body_entered"]
-[connection signal="body_exited" from="Infidelidad" to="." method="_on_infidelidad_body_exited"]
-[connection signal="body_entered" from="Diegote" to="." method="_on_diegote_body_entered"]
-[connection signal="body_exited" from="Diegote" to="." method="_on_diegote_body_exited"]
-[connection signal="body_entered" from="Casa" to="." method="_on_casa_body_entered"]
-[connection signal="body_exited" from="Casa" to="." method="_on_casa_body_exited"]
