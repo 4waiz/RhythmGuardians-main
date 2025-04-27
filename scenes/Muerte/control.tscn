@@ -16,11 +16,11 @@ bg_color = Color(0, 0, 0, 1)
 font = ExtResource("3_h5h0e")
 font_size = 111
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehvgl"]
-bg_color = Color(0, 0, 0, 0.784314)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3wx4"]
 bg_color = Color(0, 0, 0, 0.705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehvgl"]
+bg_color = Color(0, 0, 0, 0.784314)
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(1152, 648)
@@ -100,15 +100,15 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 800.0
-offset_top = 520.0
+offset_top = 538.0
 offset_right = -24.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ehvgl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b3wx4")
-text = "VOLVER A EMPEZAR"
+theme_override_styles/normal = SubResource("StyleBoxFlat_ehvgl")
+text = "RETRY"
 
 [node name="AudioDerrota" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_e54ve")
