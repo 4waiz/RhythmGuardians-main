@@ -1,26 +1,22 @@
 extends Area2D
-var matchTimer= Timer.new()
 
-# Called when the node enters the scene tree for the first time.
+var matchTimer = Timer.new()
+
 func _ready():
 	setUpTimers()
-	pass # Replace with function body.
+
 func setUpTimers():
-	matchTimer.connect("timeout", Callable(self, "quitar"))
+	matchTimer.connect("timeout", Callable(self, "_on_timer_timeout"))
 	matchTimer.set_one_shot(true)
 	add_child(matchTimer)
-	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process_(delta):
+func _process(delta):
 	pass
-
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		$AudioLlave.play()
-		
-		matchTimer.start(.5)
-func quitar():
-	queue_free()
-	pass
+		matchTimer.start(0.5)
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://scenes/victoria/victoria.tscn")
