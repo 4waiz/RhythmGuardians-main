@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/victoria/victoria.gd" id="1_7hwab"]
 [ext_resource type="Texture2D" uid="uid://bl3wmfr4xi8no" path="res://assets/menu/Victoria.png" id="2_v1g22"]
 [ext_resource type="FontFile" uid="uid://dwvi8w058xiym" path="res://fonts/VT323/VT323-Regular.ttf" id="3_j7vsa"]
-[ext_resource type="AudioStream" uid="uid://cc2len4wtru4f" path="res://sounds/Music_High__Dry_Win.mp3" id="4_1wdj3"]
+[ext_resource type="AudioStream" uid="uid://dghflcvi3lnch" path="res://sounds/Music_High__Dry_Win.mp3" id="4_1wdj3"]
 
 [sub_resource type="Theme" id="Theme_q2mi6"]
 
@@ -54,8 +54,7 @@ grow_vertical = 2
 scale = Vector2(1, 1.189)
 theme_override_fonts/font = ExtResource("3_j7vsa")
 theme_override_font_sizes/font_size = 80
-text = "UH MANSO PERRO
-LLEGUE A MI RANCHO!"
+text = "VICTORY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -75,7 +74,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "INICIO"
+text = "GO BACK"
 
 [node name="AudioVictoria" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1wdj3")

@@ -46,15 +46,15 @@ theme_override_constants/separation = 23
 
 [node name="Volver" type="Button" parent="Panel3/VBoxContainer"]
 layout_mode = 2
-text = "VOLVER AL JUEGO"
+text = "RESUME"
 
 [node name="Inicio" type="Button" parent="Panel3/VBoxContainer"]
 layout_mode = 2
-text = "INICIO"
+text = "MENU"
 
 [node name="Salir" type="Button" parent="Panel3/VBoxContainer"]
 layout_mode = 2
-text = "SALIR"
+text = "EXIT"
 
 [connection signal="pressed" from="Panel3/VBoxContainer/Volver" to="." method="_on_volver_pressed"]
 [connection signal="pressed" from="Panel3/VBoxContainer/Inicio" to="." method="_on_inicio_pressed"]

@@ -32,15 +32,18 @@ theme_override_constants/separation = 23
 [node name="volver" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "VOLVER AL JUEGO"
+theme_override_font_sizes/font_size = 35
+text = "RESUME"
 
 [node name="inicio" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "MENU INICIO"
+theme_override_font_sizes/font_size = 35
+text = "MENU"
 
 [node name="salir" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "SALIR"
+theme_override_font_sizes/font_size = 35
+text = "QUIT"
 
 [connection signal="pressed" from="VBoxContainer/volver" to="." method="_on_volver_pressed"]
 [connection signal="pressed" from="VBoxContainer/inicio" to="." method="_on_inicio_pressed"]

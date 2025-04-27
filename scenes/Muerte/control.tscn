@@ -12,15 +12,15 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htlbc"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="SystemFont" id="SystemFont_xmnca"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_54rvb"]
 font = ExtResource("3_h5h0e")
+font_size = 111
+font_color = Color(0.43134, 0.43134, 0.43134, 1)
 
-=======
+[sub_resource type="LabelSettings" id="LabelSettings_7ntvt"]
+font = ExtResource("3_h5h0e")
 font_size = 110
 font_color = Color(0, 0, 0, 1)
->>>>>>> cbee2842d330a591daaeb80ec9556fa6da5b0ea3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3wx4"]
 bg_color = Color(0, 0, 0, 0.705882)
@@ -65,17 +65,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -476.0
-offset_top = -300.0
-offset_right = 524.0
-offset_bottom = 400.0
+offset_left = -575.0
+offset_top = -323.0
+offset_right = 573.0
+offset_bottom = 321.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_grpke")
 expand_mode = 1
-stretch_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="Panel2"]
 layout_mode = 0
@@ -90,20 +89,33 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -333.0
-offset_top = 125.0
-offset_right = 333.0
-offset_bottom = 312.0
+offset_left = 25.0
+offset_top = 378.0
+offset_right = 672.0
+offset_bottom = 528.0
 grow_horizontal = 2
 scale = Vector2(1, 1.189)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_xmnca")
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_54rvb")
 horizontal_alignment = 1
-vertical_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 14.0
+offset_top = 372.0
+offset_right = 672.0
+offset_bottom = 527.0
+grow_horizontal = 2
+scale = Vector2(1, 1.189)
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_7ntvt")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -119,11 +131,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_b3wx4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ehvgl")
-<<<<<<< HEAD
 text = "RETRY"
-=======
-text = "VOLVER A EMPEZAR"
->>>>>>> cbee2842d330a591daaeb80ec9556fa6da5b0ea3
 
 [node name="AudioDerrota" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_e54ve")

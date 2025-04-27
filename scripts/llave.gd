@@ -12,7 +12,7 @@ func setUpTimers():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process_(delta):
 	pass
 
 

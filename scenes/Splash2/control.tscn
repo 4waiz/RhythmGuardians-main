@@ -14,7 +14,8 @@ bg_color = Color(0, 0, 0, 0.784314)
 bg_color = Color(0, 0, 0, 0.588235)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dgrru"]
-font_size = 41
+line_spacing = 0.5
+font_size = 56
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(1152, 648)
@@ -61,7 +62,7 @@ scale = Vector2(1, 1.189)
 theme_override_fonts/font = ExtResource("3_c0wk3")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_bxnll")
-text = "CREDITOS"
+text = "CREDITS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -83,16 +84,12 @@ scale = Vector2(0.972, 1)
 theme_override_fonts/font = ExtResource("3_c0wk3")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_qhwiy")
-text = "Celina Frassinelli - Artista
-Enzo Ceretti - Artista (2D)
-Martín Frassinelli - Artista (2D)
-Martin Avila - Programador
-Julián Giamportone - Programador
-Maximiliano Valdez - Programador
-Sirevanac - Music & Sound 
-Cecilia Arias - Game  Design"
+text = "Awaiz Ahmed - Game Developer
+
+Kazi Mahir - Game Designer"
 label_settings = SubResource("LabelSettings_dgrru")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel3" type="Panel" parent="."]
 layout_mode = 1
@@ -117,7 +114,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "INICIO"
+theme_override_font_sizes/font_size = 30
+text = "GO BACK"
 
 [node name="AudioCreditos" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_yd1vj")
