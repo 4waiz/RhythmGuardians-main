@@ -34,3 +34,6 @@ offset_bottom = 581.0
 grow_horizontal = 2
 texture = ExtResource("3_el8w0")
 stretch_mode = 4
+
+[node name="Node2D" type="Node2D" parent="background/personaje"]
+position = Vector2(339, 149)
