@@ -13,7 +13,6 @@ scale = Vector2(0.4, 0.4)
 script = ExtResource("3_xaw3v")
 speech = NodePath("Sprite2D/CenterContainer/Label")
 line1 = ["hola", "Que carita papá", "Me convidas de eso?"]
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jro1g")

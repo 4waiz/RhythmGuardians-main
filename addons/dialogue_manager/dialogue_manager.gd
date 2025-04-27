@@ -55,7 +55,7 @@ var include_singletons: bool = true
 var include_classes: bool = true
 
 ## Manage translation behaviour
-var translation_source: TranslationSource = TranslationSource.Guess
+var translation_source: TranslationSource = TranslationSource.None
 
 ## Used to resolve the current scene. Override if your game manages the current scene itself.
 var get_current_scene: Callable = func():

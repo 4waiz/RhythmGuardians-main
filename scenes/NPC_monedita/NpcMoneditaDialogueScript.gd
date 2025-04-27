@@ -24,7 +24,7 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body.is_in_group("Player") and talking:
 		await get_tree().create_timer(show_text_duration).timeout #Show the text for a short while after the player leaves
-		speech.text = "*Buscando algo*"
+		speech.text = "*Thank you*"
 		await get_tree().create_timer(silence_duration).timeout #Show "murmur" for a short while before going silent
 		speech.text = ""
 		talking = false
@@ -39,5 +39,3 @@ func talk_tween():
 	tween.tween_property(self, "scale", Vector2(0.4, 0.4), 0.2)
 	#tween.tween_property(self, "scale", Vector2(1.1, 1.1), 0.2)
 	#tween.tween_property(self, "scale", Vector2.ONE, 0.2)
-
-

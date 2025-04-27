@@ -19,14 +19,14 @@ func _on_body_entered(body):
 		if body.is_in_group("Player") and not talking:
 			print("Hablando")
 			talk_tween()
-			speech.text = line1[randi() % line1.size()]
+			speech.text = "*Thank you for the food!*"
 
 func _on_body_exited(body):
 	if body.is_in_group("Player") and talking:
 		await get_tree().create_timer(show_text_duration).timeout #Show the text for a short while after the player leaves
-		speech.text = "*Hablando solo*"
+		speech.text = "*Thank you for the food!*"
 		await get_tree().create_timer(silence_duration).timeout #Show "murmur" for a short while before going silent
-		speech.text = ""
+		speech.text = "Bye Bye"
 		talking = false
 		
 #endregion
