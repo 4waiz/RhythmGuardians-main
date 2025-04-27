@@ -5,7 +5,6 @@ var speed = 150
 var speed_movimiento_aleatorio = 150
 
 @onready var timer = $"../Timer"
-@onready var llave = $"../CanvasLayer/Container/llave"
 @onready var pickUp = $AnimatedSprite2D2
 @onready var camara = $Camera2D
 @onready var sprite = $AnimatedSprite2D
@@ -22,7 +21,7 @@ func _ready() -> void:
 	sprite.play("default")
 	pickUp.hide()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var moverIzqDer = Input.get_axis("ui_left", "ui_right")
 	var moverArrAba = Input.get_axis("ui_up", "ui_down")
 	var moverAmbas = Vector2(moverIzqDer, moverArrAba)

@@ -2,9 +2,8 @@ extends Node
 
 var llave = false
 
-
 func game_over():
-	get_tree().change_scene_to_file("res://scenes/Muerte/control.tscn")
+	call_deferred("_change_scene", "res://scenes/Muerte/control.tscn")
 
-func win_game():
-	get_tree().change_scene_to_file("res://scenes/victoria/victoria.tscn")
+func _change_scene(scene_path: String):
+	get_tree().change_scene_to_file(scene_path)
