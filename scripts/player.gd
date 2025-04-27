@@ -79,7 +79,7 @@ func _physics_process(delta):
 		mensaje.text = "PALIDA, GAME OVER"
 		Autoload.game_over()
 	elif  barraHigh.value >= 70:
-		mensaje.text = "CONTROLA TU ESTABILIDAD, TE VA A DAR LA PALIDA"
+		mensaje.text = "Error Occured"
 		high_alto = true
 	else:
 		high_alto = false

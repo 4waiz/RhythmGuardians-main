@@ -39,5 +39,3 @@ func talk_tween():
 	tween.tween_property(self, "scale", Vector2(0.4, 0.4), 0.2)
 	#tween.tween_property(self, "scale", Vector2(1.1, 1.1), 0.2)
 	#tween.tween_property(self, "scale", Vector2.ONE, 0.2)
-
-
