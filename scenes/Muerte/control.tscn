@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2bda7vc03d15"]
+[gd_scene load_steps=12 format=3 uid="uid://d2bda7vc03d15"]
 
 [ext_resource type="Script" path="res://scenes/Muerte/Control.gd" id="1_xu868"]
 [ext_resource type="Texture2D" uid="uid://cjimduhwquxg7" path="res://assets/menu/Derrota-3.0_.png" id="2_grpke"]
@@ -12,9 +12,15 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htlbc"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="SystemFont" id="SystemFont_xmnca"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_54rvb"]
 font = ExtResource("3_h5h0e")
-font_size = 111
+
+=======
+font_size = 110
+font_color = Color(0, 0, 0, 1)
+>>>>>>> cbee2842d330a591daaeb80ec9556fa6da5b0ea3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3wx4"]
 bg_color = Color(0, 0, 0, 0.705882)
@@ -59,10 +65,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -450.0
+offset_left = -476.0
 offset_top = -300.0
-offset_right = 450.0
-offset_bottom = 300.0
+offset_right = 524.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -85,14 +91,19 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -333.0
+offset_top = 125.0
 offset_right = 333.0
-offset_bottom = 187.0
+offset_bottom = 312.0
 grow_horizontal = 2
 scale = Vector2(1, 1.189)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_xmnca")
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_54rvb")
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -108,7 +119,11 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_b3wx4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ehvgl")
+<<<<<<< HEAD
 text = "RETRY"
+=======
+text = "VOLVER A EMPEZAR"
+>>>>>>> cbee2842d330a591daaeb80ec9556fa6da5b0ea3
 
 [node name="AudioDerrota" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_e54ve")
