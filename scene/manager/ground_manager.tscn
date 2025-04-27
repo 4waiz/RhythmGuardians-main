@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdn3fg3cs8b5e"]
-
-[ext_resource type="Script" path="res://scene/manager/ground_manager.gd" id="1_0c30x"]
-
-[node name="GroundManager" type="Node"]
-script = ExtResource("1_0c30x")
